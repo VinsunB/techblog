@@ -2,5 +2,9 @@
 <br>
 <%= @article.content %>
 <br>
+
+<% if admin? %>
 <%= link_to "edit", edit_article_path %>
+<% end %>
+
 <%= link_to "back", articles_path %>

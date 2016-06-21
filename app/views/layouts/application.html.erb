@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<% if session[:admin] %>
+<p>admin <%= link_to "sign out", admin_destroy_path, method: :delete %></p>
+<% end %>
+
 <%= yield %>
 
 </body>

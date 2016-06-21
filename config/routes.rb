@@ -1,10 +1,28 @@
 Rails.application.routes.draw do
-  get 'pages/about'
 
-  get 'pages/email'
+###### article routes ######## 
+root 'articles#index'
+resources :articles
+##############################
 
-  root 'articles#index'
-  resources :articles
+  ######### admin routes ########
+  get 'admin/new'
+  get 'admin' => 'admin#new'
+  post 'admin/create'
+  delete 'admin/destroy'
+  #############################
+
+    ######## page routes ######
+    get 'pages/about'
+    get 'pages/email'
+    ##########################
+  
+
+
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
