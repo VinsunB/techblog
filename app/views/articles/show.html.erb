@@ -1,12 +1,12 @@
 <%= @article.title %>
 <br>
-<%= @article.content %>
+<!-- helper method -->
+<%= sanitizer(@article.content) %>
 <br>
 <% if admin? %>
 <%= link_to "edit", edit_article_path %>
 <% end %>
 <%= link_to "back", articles_path %>
-
 
   <script id="dsq-count-scr" src="//portfoliotechblog1.disqus.com/count.js" async></script>
 <div id="disqus_thread"></div>

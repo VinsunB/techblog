@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>TechBlog</title>
+  <style src="assets/stylesheets/article_show.css"></style>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,6 +12,12 @@
 <% if session[:admin] %>
 <p>admin <%= link_to "sign out", admin_destroy_path, method: :delete %></p>
 <% end %>
+
+<ul>
+<li><%= link_to "About", pages_about_path %></li>
+<li><%= link_to "Email", pages_email_path %></li>
+<li><%= link_to "articles", articles_path %></li>
+</ul>
 
 <%= yield %>
 

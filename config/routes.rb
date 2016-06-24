@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+root 'pages#about'
+
 ###### article routes ######## 
-root 'articles#index'
 resources :articles
 ##############################
 
