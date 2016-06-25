@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'messages/new'
+
 root 'pages#about'
 
 ###### article routes ######## 
@@ -17,9 +19,10 @@ resources :articles
     get 'pages/about'
     get 'pages/email'
     ##########################
-  
-
-
+   
+      ######## messages ###########
+      resources :messages, only: [:new, :create]
+      ##########################
 
 
 
